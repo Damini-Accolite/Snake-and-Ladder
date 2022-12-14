@@ -41,6 +41,9 @@ export class BoardComponent implements OnInit{
           if(this.prevPoint1==this.point2){
 
           }
+          else if(this.prevPoint1==this.point1){
+            this.point1.style.backgroundColor = "green";
+          }
           else{
             this.prevPoint1.style.backgroundColor="white";
           }
@@ -69,6 +72,9 @@ export class BoardComponent implements OnInit{
         if(this.prevPoint2!=null){
           if(this.prevPoint2==this.point1){
 
+          }
+          else if(this.prevPoint2==this.point2){
+            this.point2.style.backgroundColor = "blue";
           }
           else
             this.prevPoint2.style.backgroundColor="white";
@@ -105,15 +111,11 @@ export class BoardComponent implements OnInit{
   } 
 
     snakes: number[][] = [
-      [9, 4],
       [13, 6],
-      [19, 2],
-      [34, 22],
-        
+      [19, 2] 
     ];
     ladders: number[][] = [
-      [3, 11],
-      [5, 23],
+      [16, 23],
       [7, 15],
       [21, 33]
     ];
