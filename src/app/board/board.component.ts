@@ -37,8 +37,14 @@ export class BoardComponent implements OnInit{
       this.point1=document.getElementById('cell'+this.player1Pos);
       if(this.point1!=null){
         this.point1.style.backgroundColor = "green";
-      if(this.prevPoint1!=null)
-        this.prevPoint1.style.backgroundColor="white";
+        if(this.prevPoint1!=null){
+          if(this.prevPoint1==this.point2){
+
+          }
+          else{
+            this.prevPoint1.style.backgroundColor="white";
+          }
+        }
       }
       this.prevPoint1=this.point1;
     })
@@ -60,8 +66,13 @@ export class BoardComponent implements OnInit{
       this.point2=document.getElementById('cell'+this.player2Pos);
       if(this.point2!=null){
         this.point2.style.backgroundColor = "blue";
-      if(this.prevPoint2!=null)
-        this.prevPoint2.style.backgroundColor="white";
+        if(this.prevPoint2!=null){
+          if(this.prevPoint2==this.point1){
+
+          }
+          else
+            this.prevPoint2.style.backgroundColor="white";
+        }
       }
       this.prevPoint2=this.point2;
     })
